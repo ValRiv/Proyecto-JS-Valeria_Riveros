@@ -56,25 +56,25 @@ const ingresar= document.getElementById('btnIngresar');
     
     if (userValido === true) {
         console.log("El usuario es valido") 
-        usuarioLogeado.textContent="Bienvenid@!!!  "  + localStorage.getItem("usuario") + " gracias por su mensaje!!!";
+        usuarioLogeado.textContent="Welcome!!!  "  + localStorage.getItem("usuario"); //+ " gracias por su mensaje!!!"//;
 
-    }else if(usuario == "")  {
+    }else if(userValido === false)  {
         console.log("El usuario no es valido")
-        usuarioNoValido.textContent= "El usuario no es valido"
+        usuarioNoValido.textContent= "The username is not valid, please enter a username"
     }
     
     if (correovalido=== true) {
         console.log("El correo es valido")
-    } else if(email == ""){
-        console.log("El correo no es valido")
-        correoNoValido.textContent="El correo no es valido" 
-        usuarioLogeado.textContent="Bienvenid@!!!  "  + localStorage.getItem("usuario") + " ingrese nuevamente tu email, por favor!!";
+    } else if(correovalido === false){
+        console.log("El correo no es valido, por favor ingrese su correo")
+        correoNoValido.textContent="The email is not valid, please enter an email" 
+        //usuarioLogeado.textContent="Bienvenid@!!!  "  + localStorage.getItem("usuario") + " ingrese nuevamente tu email, por favor!!";
     }
 
     if (mensaje=="") {
         console.log("Mensaje vacio")
-        mensajeVacio.textContent="Ingrese un mensaje"
-        usuarioLogeado.textContent="Bienvenid@!!!  "  + localStorage.getItem("usuario") + " ingrese su mensaje, por favor!!";
+        mensajeVacio.textContent="Insert your message here"
+        //usuarioLogeado.textContent="Bienvenid@!!!  "  + localStorage.getItem("usuario") + " ingrese su mensaje, por favor!!";
     } 
     
     const login = document.getElementById('login');
